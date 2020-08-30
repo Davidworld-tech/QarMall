@@ -81,7 +81,7 @@ public class CartAdapter extends RecyclerView.Adapter {
         return cartItemModelList.size();
     }
 
-    class CartItemViewHolder extends RecyclerView.ViewHolder {
+    static class CartItemViewHolder extends RecyclerView.ViewHolder {
 
         private ImageView productImage;
         private TextView productTitle;
