@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".LoginActivity"
+    tools:context=".RegisterActivity"
     tools:ignore="ContentDescription">
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -14,7 +14,7 @@
         tools:ignore="UselessParent">
 
         <ImageButton
-            android:id="@+id/login_close"
+            android:id="@+id/register_close"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
@@ -25,12 +25,14 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="150dp"
-            android:layout_below="@id/login_close"
+            android:layout_below="@id/register_close"
             android:src="@drawable/logo" />
+
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="80dp"
             android:gravity="center">
 
             <androidx.cardview.widget.CardView
@@ -50,36 +52,90 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="@string/login_email"
+                        android:text="@string/r_email"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
                     <EditText
-                        android:id="@+id/login_Email"
+                        android:id="@+id/register_email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:autofillHints=""
-                        android:hint="@string/login_enter_your_email_id"
+                        android:hint="@string/r_enter_email"
                         android:inputType="textEmailAddress" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
-                        android:text="@string/login_password"
+                        android:text="@string/r_phoneNumber"
                         android:textSize="14sp"
                         android:textStyle="bold" />
 
                     <EditText
-                        android:id="@+id/login_password"
+                        android:id="@+id/register_phoneNumber"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="10dp"
                         android:layout_marginEnd="10dp"
                         android:autofillHints=""
-                        android:hint="@string/login_enter_password"
+                        android:hint="@string/r_enter_phone_number"
+                        android:inputType="phone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="@string/r_username"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/register_userName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:autofillHints=""
+                        android:hint="@string/register_username"
+                        android:inputType="text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="@string/password_r"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/register_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:autofillHints=""
+                        android:hint="@string/enter_password_register"
+                        android:inputType="textPassword" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="@string/confirm_password"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/register_confirm_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:autofillHints=""
+                        android:hint="@string/retype_password"
                         android:inputType="textPassword" />
                 </LinearLayout>
 
@@ -87,7 +143,7 @@
             </androidx.cardview.widget.CardView>
 
             <Button
-                android:id="@+id/btnLogin"
+                android:id="@+id/btnSignUp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/cv"
@@ -97,40 +153,13 @@
                 android:layout_marginEnd="35dp"
                 android:layout_marginBottom="-20dp"
                 android:background="@drawable/login_button_style"
-                android:text="@string/login_btn_txt"
+                android:text="@string/r_sign_up"
                 android:textAllCaps="false"
-                android:textColor="#50FFFFFF"
+                android:textColor="@color/white"
                 android:transitionName="loginTransition" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/cv"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp"
-                android:orientation="horizontal"
-                android:paddingStart="10dp"
-                android:paddingEnd="10dp">
-
-                <CheckBox
-                    android:id="@+id/remember_me_check"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="100dp"
-                    android:text="@string/remember_me_txt" />
-
-                <TextView
-                    android:id="@+id/forgotPasswordText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/login_forgot_password"
-                    android:textColor="@color/black"
-                    android:textSize="14sp" />
-
-            </LinearLayout>
-
-
         </RelativeLayout>
+
 
         <LinearLayout
             android:id="@+id/bottom"
@@ -145,11 +174,11 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/do_not_have_an_account"
+                android:id="@+id/already_have_an_account"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="-20dp"
-                android:text="@string/l_don_t_have_an_account_sign_up"
+                android:text="@string/r_already_have_an_account_sign_in"
                 android:textColor="@color/white"
                 android:transitionName="signUpTransition" />
         </LinearLayout>
