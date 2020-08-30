@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "879265635647",
+    "firebase_url": "https://qarmall-2322d.firebaseio.com",
+    "project_id": "qarmall-2322d",
+    "storage_bucket": "qarmall-2322d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:879265635647:android:1a88f60a8bf25a3022c78a",
+        "android_client_info": {
+          "package_name": "qarmall.co.ke"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "879265635647-ige7dufiqj9b9utlldv1t6qgmpuuna4f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "qarmall.co.ke",
+            "certificate_hash": "d47c8ed79a9e1f7b8998101d142e67d846f551b6"
+          }
+        },
+        {
+          "client_id": "879265635647-ltrp30h5pmtakn30jh73rer97v01girq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnA1-lQ5O8VAnf2nFL6YCKpBrSOSaumZ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "879265635647-ltrp30h5pmtakn30jh73rer97v01girq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
